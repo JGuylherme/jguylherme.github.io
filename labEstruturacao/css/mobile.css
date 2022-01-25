@@ -1,0 +1,35 @@
+/*Resolução mobile*/
+@media (max-width: 767px){
+    .news div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .news a{
+        width: 100%;
+    }
+    
+    .staff{
+        justify-content:center;
+    }
+
+    .products div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .products a{
+        width: 100%;
+    }
+
+    footer{
+        justify-content: center;
+    }
+        footer div:first-child{
+            display: none;
+        }
+}

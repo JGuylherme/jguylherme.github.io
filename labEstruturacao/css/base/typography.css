@@ -1,0 +1,83 @@
+*{
+    font-family: Arial, Helvetica,sans-serif;
+}
+
+/*Header*/
+header a {
+    font-size: 0.75em;
+    font-weight: lighter;
+}
+
+header h3{
+    font-size: 0.95em;
+    font-weight: normal;
+}
+
+header h1{
+    font-size:3.6em;
+    font-weight: lighter;
+}
+
+header p{
+    font-size: 0.9em;
+}
+
+/*Main*/
+.news h3{
+    font-weight: lighter;
+    line-height:1.5em;
+}
+
+.news p{
+    font-size: 0.9em;
+    font-weight: lighter;
+    line-height:1.5em;
+}
+
+.news a, .products a {
+    font-size: 0.9em;
+}
+
+    .staff h2 {
+        font-size: 2.6em;
+        font-weight: normal;
+    }
+    .staff h3 {
+        font-weight: normal;
+    }
+
+    .products h2{
+        font-size: 2.6em;
+        font-weight: normal;
+    }
+    .products h3{
+        font-weight: normal;
+    }
+    .products p{
+        line-height: 1.5em;
+    }
+    
+/*Footer*/
+footer a {
+    text-decoration:none;
+}
+/*Tablet*/
+@media (max-width: 767px){
+    nav{
+        display: none;
+    }
+    header h1{
+        font-size: 1.8em;
+        font-weight: lighter;
+    }
+    header p{
+        font-size: 0.7em;
+    }
+
+    .staff h2{
+        font-size: 2em;
+    }
+    .staff > p {
+        font-size: 0.8em;
+    }
+}

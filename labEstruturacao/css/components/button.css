@@ -1,0 +1,11 @@
+header a {
+    text-decoration: none;
+    color:var(--white);
+}
+
+.news a, .products a {
+    background-color:var(--blue);
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+}
