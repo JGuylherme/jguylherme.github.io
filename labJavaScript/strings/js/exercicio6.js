@@ -8,7 +8,7 @@ function daysOfLife(data) {
     else{
         var seconds = Math.abs(dateNow - date) / 1000;
 
-        var days = Math.floor(seconds/(60*60*24));
+        var days = Math.trunc(seconds/(60*60*24));
         return days;
     }
 }
