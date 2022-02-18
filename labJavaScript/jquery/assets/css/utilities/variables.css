@@ -1,0 +1,14 @@
+:root{
+    --top-background: #7300a8;
+    --bottom-background: #0f0f0f;
+    --title-background: #c76dca;
+    --border: #000000;
+    --article-background-top: #ffffff;
+    --article-background-bottom: #3c24a7;
+    --star: #fbff00;
+    --shadow-background: #ff7c7c;
+    /*Age classification colours*/
+    --classification-green: #00d60b;
+    --classification-yellow: #e5ff00;
+    --classification-red: #ff0000;
+}

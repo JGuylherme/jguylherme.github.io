@@ -1,0 +1,113 @@
+body {
+    background: -webkit-gradient(linear, left top, left bottom, from(var(--top-background)), to(var(--bottom-background))) fixed;
+    width: 90%;
+    margin: 3em auto;
+}
+.main{
+    border-radius: 50px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1), 0 6px 20px 0 rgba(0, 0, 0, 1);
+}
+h1{
+    width: 100%;
+    padding: 25px 50px;
+    border-radius: 50px;
+    background-color: var(--title-background);
+}
+.content{
+    margin-top: 25px;
+}
+.cards{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:center;
+}
+/*Added Content*/
+/*Singular card*/
+.movie-card{
+    width: 300px;
+    margin: 25px;
+    background: -webkit-gradient(linear, left top, left bottom, from(var(--article-background-top)), to(var(--article-background-bottom)));
+    border:2px solid var(--border);
+}
+/*Image*/
+.movie-image img{
+    width: 100%;
+}
+/*Title*/
+.movie-title{
+    margin: 0px 15px;
+    padding-bottom: 20px;
+    border-bottom: 2px dashed var(--border);
+}
+/*Movie Info*/
+.movie-info{
+    padding: 15px;
+}
+.movie-genre{
+    margin: 10px 0px;
+}
+    .movie-genre li{
+        display: inline;
+    }
+    .movie-genre li:after{
+        content: ", ";
+    }
+    .movie-genre li:last-child:after{
+        content: "";
+    }
+    .movie-genre li:first-child:after{
+        content: "";
+    }
+.movie-cast{
+    margin: 10px 0px;
+}
+    .movie-cast li{
+        display: inline;
+    }
+    .movie-cast li:after{
+        content: ", ";
+    }
+    .movie-cast li:last-child:after{
+        content: "";
+    }
+    .movie-cast li:first-child:after{
+        content: "";
+    }
+/*Rating*/
+.movie-opinion{
+    margin-bottom: 10px;
+}
+.movie-opinion li{
+    border: 1px solid var(--border);
+    border-bottom: none;
+}
+.movie-opinion li:first-child{
+    border: none;
+}
+.movie-opinion li:last-child{
+    border: 1px solid var(--border);
+}
+/*Similar titles*/
+.similar-titles p{
+    font-weight: bold;
+}
+.list-similar-titles{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.list-similar-titles img{
+    width: 80px;
+    height: 80px;
+}
+/*Classification*/
+.classification{
+    position: relative;
+    bottom: 40px;
+    border-radius: 0 50px 50px 0;
+    padding: 2.5px 15px 2.5px 15px;
+}
+.stars{
+    color: var(--star);
+}

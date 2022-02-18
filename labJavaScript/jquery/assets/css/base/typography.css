@@ -1,0 +1,31 @@
+*{
+    font-family: 'Times New Roman', Times, serif;
+}
+h1{
+    font-size: 3em;
+    text-align: center;
+    text-shadow:
+     -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff, -2px -5px 0px var(--shadow-background);
+    color: var(--title-background);
+
+}
+h2{
+    font-size: 2em;
+    text-align: center;
+}
+p.movie-summary::first-letter{
+    font-size: 1.5em;
+    font-weight: bold;
+}
+.movie-genre :first-child{
+    font-weight: bold;
+}
+.movie-cast :first-child{
+    font-weight: bold;
+}
+.movie-opinion li:first-child{
+    font-weight: bold;
+}
+.rating-stars p{
+    font-style: italic;
+}
