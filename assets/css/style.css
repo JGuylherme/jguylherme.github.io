@@ -190,16 +190,22 @@ nav {
     background: var(--surface);
 }
 
-.nav-link.active::before {
-    content: '';
+.nav-links {
+    position: relative;
+}
+
+.nav-indicator {
     position: absolute;
     left: 0;
-    top: 50%;
-    transform: translateY(-50%);
     width: 3px;
-    height: 60%;
+    height: 0;
     background: var(--accent);
     border-radius: 0 3px 3px 0;
+    transition: 
+        top .35s cubic-bezier(.16,1,.3,1),
+        height .35s cubic-bezier(.16,1,.3,1),
+        opacity .2s;
+    opacity: 0;
 }
 
 .nav-icon {
@@ -208,7 +214,6 @@ nav {
     opacity: .5;
 }
 
-/* dropdown */
 .nav-dropdown {
     overflow: hidden;
     max-height: 0;

@@ -26,25 +26,35 @@
 
   <div class="layout">
     <nav id="nav">
+      <div class="nav-indicator" id="navIndicator"></div>
       <div class="nav-logo">
         <span class="logo-mark">G<span>.</span>dev</span>
-        <div class="logo-sub" data-en="Portfolio 2025" data-pt="Portfólio 2025">Portfolio 2025</div>
+        <div class="logo-sub" data-en="Portfolio 2026" data-pt="Portfólio 2026">Portfolio 2026</div>
       </div>
 
       <ul class="nav-links">
+
         <li class="nav-item">
-          <a class="nav-link active" data-section="home" onclick="scrollTo('home')">
+          <a class="nav-link active" data-section="home" href="#home">
             <span class="nav-icon">&lt;/&gt;</span>
             <span data-en="Home" data-pt="Início">Home</span>
           </a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" data-section="about" onclick="scrollTo('about')">
+          <a class="nav-link" data-section="projects" href="#projects">
+            <span class="nav-icon">[]</span>
+            <span data-en="Projects" data-pt="Projetos">Projects</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" data-section="about" href="#about">
             <span class="nav-icon">{}</span>
             <span data-en="About Me" data-pt="Sobre Mim">About Me</span>
           </a>
         </li>
+
       </ul>
 
       <div class="nav-bottom">
@@ -109,10 +119,11 @@
           </div>
 
           <div class="hero-actions">
-            <a class="btn-primary" onclick="scrollTo('projects')">
+            <a href="#projects" class="btn-primary">
               <span data-en="View Projects" data-pt="Ver Projetos">View Projects</span> →
             </a>
-            <a class="btn-secondary" onclick="scrollTo('about')">
+
+            <a href="#about" class="btn-secondary">
               <span data-en="About Me" data-pt="Sobre Mim">About Me</span>
             </a>
           </div>
@@ -167,6 +178,25 @@
               data-pt="Ver Projeto →">
               View Project →
             </a>
+          </div>
+
+          <div class="project-card fade-in">
+            <div class="project-content">
+
+              <h3 data-en="More projects coming..." data-pt="Mais projetos em breve...">
+                More projects coming...
+              </h3>
+
+              <p data-en="Currently building new projects. Stay tuned 🚧"
+                data-pt="Construindo novos projetos no momento. Em breve 🚧">
+                Currently building new projects. Stay tuned 🚧
+              </p>
+
+            </div>
+
+            <span class="project-link" data-en="In progress..." data-pt="Em construção...">
+              In progress...
+            </span>
           </div>
 
         </div>

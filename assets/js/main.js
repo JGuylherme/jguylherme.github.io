@@ -46,10 +46,53 @@ function typeLoop() {
 }
 typeLoop();
 
-function scrollTo(id) {
-  document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
-  document.getElementById('nav').classList.remove('open');
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    const nav = document.getElementById('nav');
+
+    nav.classList.remove('open');
+    document.body.classList.remove('nav-open');
+  });
+});
+
+const indicator = document.getElementById('navIndicator');
+
+function moveIndicator(el) {
+  if (!el || !indicator) return;
+
+  const parent = el.parentElement;
+  const container = document.querySelector('.nav-links');
+
+  const top = parent.offsetTop;
+  const height = parent.offsetHeight;
+
+  indicator.style.top = top + 'px';
+  indicator.style.height = height + 'px';
+  indicator.style.opacity = 1;
 }
+
+document.querySelectorAll('.nav-link').forEach(link => {
+  link.addEventListener('click', () => {
+    moveIndicator(link);
+  });
+});
+
+window.addEventListener('scroll', () => {
+  const activeLink = document.querySelector('.nav-link.active');
+  if (activeLink) moveIndicator(activeLink);
+});
+
+window.addEventListener('load', () => {
+  const activeLink = document.querySelector('.nav-link.active');
+  if (activeLink) moveIndicator(activeLink);
+});
 
 function toggleDropdown(id) {
   document.getElementById(id).classList.toggle('open');
