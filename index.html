@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guylherme — Dev</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@300;400;500;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+
+  <canvas id="bgCanvas"></canvas>
+
+  <div class="theme-flash" id="themeFlash"></div>
+
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+
+  <div class="scroll-indicator" id="scrollDots"></div>
+
+  <div class="layout">
+    <nav id="nav">
+      <div class="nav-logo">
+        <span class="logo-mark">G<span>.</span>dev</span>
+        <div class="logo-sub" data-en="Portfolio 2025" data-pt="Portfólio 2025">Portfolio 2025</div>
+      </div>
+
+      <ul class="nav-links">
+        <li class="nav-item">
+          <a class="nav-link active" data-section="home" onclick="scrollTo('home')">
+            <span class="nav-icon">&lt;/&gt;</span>
+            <span data-en="Home" data-pt="Início">Home</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" data-section="about" onclick="scrollTo('about')">
+            <span class="nav-icon">{}</span>
+            <span data-en="About Me" data-pt="Sobre Mim">About Me</span>
+          </a>
+        </li>
+      </ul>
+
+      <div class="nav-bottom">
+        <div class="control-group">
+          <button class="ctrl-btn active" id="enBtn" onclick="setLang('en')">EN</button>
+          <button class="ctrl-btn" id="ptBtn" onclick="setLang('pt')">PT</button>
+        </div>
+        <div class="control-group">
+          <button class="ctrl-btn" id="lightBtn" onclick="setTheme('light')">☀</button>
+          <button class="ctrl-btn" id="darkBtn" onclick="setTheme('dark')">☾</button>
+        </div>
+      </div>
+    </nav>
+    <main>
+      <section class="section" id="home">
+        <div class="float-tags" aria-hidden="true">
+          <div class="float-tag">&lt;html&gt;</div>
+          <div class="float-tag">&lt;body&gt;</div>
+          <div class="float-tag">const dev = () =&gt; {</div>
+          <div class="float-tag">&nbsp;&nbsp;return &#x1F680;;</div>
+          <div class="float-tag">}</div>
+        </div>
+
+        <div>
+          <div class="hero-pre" data-en="// Available for freelance" data-pt="// Disponível para freelance">// Available
+            for freelance</div>
+
+          <div class="hero-code">
+            <div class="hero-lines">
+              <div class="hero-line">
+                <span class="line-num">01</span>
+                <span>
+                  <span class="tag">&lt;</span><span class="punct">Hello</span><span
+                    class="tag">,&nbsp;World!</span><span class="tag"> /&gt;</span>
+                </span>
+              </div>
+              <div class="hero-line">
+                <span class="line-num">02</span>
+                <span>
+                  <span class="tag">&lt;</span><span data-en="I'm&nbsp;" data-pt="Eu sou&nbsp;">I'm&nbsp;</span><span
+                    class="name" id="typedName"></span><span class="cursor"></span><span class="tag">&gt;</span>
+                </span>
+              </div>
+              <div class="hero-line">
+                <span class="line-num">03</span>
+                <span><span class="tag">&lt;/end&gt;</span></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-sub">
+            <span class="comment">/*</span><br />
+            <span class="comment" data-en="&nbsp;* I build full-stack systems, landing pages,"
+              data-pt="&nbsp;* Desenvolvo sistemas full-stack e landing pages,">
+              &nbsp;* I build full-stack systems, landing pages,
+            </span><br />
+            <span class="comment" data-en="&nbsp;* and robust test automation."
+              data-pt="&nbsp;* e automação de testes robusta.">
+              &nbsp;* and robust test automation.
+            </span><br />
+            <span class="comment">&nbsp;*/</span>
+          </div>
+
+          <div class="hero-actions">
+            <a class="btn-primary" onclick="scrollTo('projects')">
+              <span data-en="View Projects" data-pt="Ver Projetos">View Projects</span> →
+            </a>
+            <a class="btn-secondary" onclick="scrollTo('about')">
+              <span data-en="About Me" data-pt="Sobre Mim">About Me</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="projects">
+        <div class="section-head fade-in">
+          <div class="section-label" data-en="Projects" data-pt="Projetos">
+            Projects
+          </div>
+
+          <h2 class="section-title" data-en="My <em>projects</em>." data-pt="Meus <em>projetos</em>.">
+            My <em>projects</em>.
+          </h2>
+        </div>
+
+        <div class="projects-grid">
+
+          <div class="project-card fade-in">
+            <div class="project-content">
+              <h3 data-en="Law Firm Landing Page" data-pt="Landing Page de Advocacia">
+                Advocacia Landing Page
+              </h3>
+              <p data-en="Modern and responsive landing page built for a law firm, focused on informative design."
+                data-pt="Landing page moderna e responsiva para escritório de advocacia, focada em design informativo.">
+                Modern and responsive landing page built for a law firm, focused on informative design.
+              </p>
+            </div>
+            <a href="./projects/advocacia-landing-page/index.html" class="project-link" data-en="View Project →"
+              data-pt="Ver Projeto →">
+              View Project →
+            </a>
+          </div>
+
+          <div class="project-card fade-in">
+            <div class="project-content">
+
+              <h3 data-en="Guesthouse Landing Page" data-pt="Landing Page de Pousada">
+                Pousada Landing Page
+              </h3>
+
+              <p data-en="High-converting landing page for an inn, optimized for bookings and mobile experience."
+                data-pt="Landing page de alta conversão para pousada, otimizada para reservas e experiência mobile.">
+                High-converting landing page for an inn, optimized for bookings
+                and mobile experience.
+              </p>
+
+            </div>
+
+            <a href="./projects/pousada-landing-page/index.html" class="project-link" data-en="View Project →"
+              data-pt="Ver Projeto →">
+              View Project →
+            </a>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="section" id="about">
+        <div class="section-head fade-in">
+          <div class="section-label" data-en="About Me" data-pt="Sobre Mim">About Me</div>
+          <h2 class="section-title" data-en="About <em>me</em>." data-pt="Sobre <em>mim</em>.">About <em>me</em>.</h2>
+        </div>
+
+        <div class="about-grid">
+
+          <div class="about-text fade-in">
+            <p data-en="<strong>Hey! I'm Guylherme</strong> — a full-stack developer and QA automation engineer based in Brazil. I build scalable systems, high-converting landing pages, and ensure software quality through robust testing and automation."
+              data-pt="<strong>Oi! Sou Guylherme</strong> — desenvolvedor full-stack e engenheiro de QA focado em automação, baseado no Brasil. Desenvolvo sistemas escaláveis, landing pages de alta conversão e garanto a qualidade de software com testes robustos.">
+              <strong>Hey! I'm Guylherme</strong> — a full-stack developer and QA automation engineer based in Brazil. I
+              build scalable systems, high-converting landing pages, and ensure software quality through robust testing
+              and automation.
+            </p>
+
+            <p data-en="With a background in Information Systems from CEFET/RJ, I have experience across development, testing, and project leadership. I've worked on real-world systems, contributing to both frontend and backend while leading teams and improving development workflows."
+              data-pt="Formado em Sistemas de Informação pelo CEFET/RJ, possuo experiência em desenvolvimento, testes e liderança de projetos. Atuei em sistemas reais, contribuindo tanto no frontend quanto no backend, além de liderar equipes e otimizar processos.">
+              With a background in Information Systems from CEFET/RJ, I have experience across development, testing, and
+              project leadership. I've worked on real-world systems, contributing to both frontend and backend while
+              leading teams and improving development workflows.
+            </p>
+
+            <div class="skills-list">
+              <span class="tag-pill">JavaScript</span>
+              <span class="tag-pill">TypeScript</span>
+              <span class="tag-pill">React</span>
+              <span class="tag-pill">Next.js</span>
+              <span class="tag-pill">Node.js</span>
+              <span class="tag-pill">SQL</span>
+              <span class="tag-pill">REST API</span>
+              <span class="tag-pill">Docker</span>
+              <span class="tag-pill">Git</span>
+              <span class="tag-pill">GitHub</span>
+              <span class="tag-pill">Tailwind CSS</span>
+              <span class="tag-pill">CSS</span>
+              <span class="tag-pill">Figma</span>
+              <span class="tag-pill">Cypress</span>
+              <span class="tag-pill">Robot Framework</span>
+              <span class="tag-pill">Automation QA</span>
+              <span class="tag-pill">Testing</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
