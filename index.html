@@ -141,16 +141,23 @@
           </h2>
         </div>
 
+        <div class="project-filters">
+          <button class="filter-btn active" data-filter="all" data-en="All" data-pt="Todos">All</button>
+          <button class="filter-btn" data-filter="landing-page" data-en="Landing Page" data-pt="Landing Page">Landing Page</button>
+          <button class="filter-btn" data-filter="playwright" data-en="Playwright" data-pt="Playwright">Playwright</button>
+          <button class="filter-btn" data-filter="k6" data-en="k6" data-pt="k6">k6</button>
+        </div>
+
         <div class="projects-grid">
 
-          <div class="project-card fade-in">
+          <div class="project-card fade-in" data-tags="landing-page">
             <div class="project-content">
               <h3 data-en="Law Firm Landing Page" data-pt="Landing Page de Advocacia">
                 Advocacia Landing Page
               </h3>
-              <p data-en="Modern and responsive landing page built for a law firm, focused on informative design."
-                data-pt="Landing page moderna e responsiva para escritório de advocacia, focada em design informativo.">
-                Modern and responsive landing page built for a law firm, focused on informative design.
+              <p data-en="Demo landing page for a law firm, created as a polished prototype with an informative design."
+                data-pt="Landing page de demonstração para escritório de advocacia, criada como protótipo profissional com design informativo.">
+                Demo landing page for a law firm, created as a polished prototype with an informative design.
               </p>
             </div>
             <a href="./projects/advocacia-landing-page/index.html" class="project-link" data-en="View Project →"
@@ -159,23 +166,54 @@
             </a>
           </div>
 
-          <div class="project-card fade-in">
+          <div class="project-card fade-in" data-tags="landing-page">
             <div class="project-content">
 
               <h3 data-en="Guesthouse Landing Page" data-pt="Landing Page de Pousada">
                 Pousada Landing Page
               </h3>
 
-              <p data-en="High-converting landing page for an inn, optimized for bookings and mobile experience."
-                data-pt="Landing page de alta conversão para pousada, otimizada para reservas e experiência mobile.">
-                High-converting landing page for an inn, optimized for bookings
-                and mobile experience.
+              <p data-en="Demo landing page for a guesthouse, designed as a conversion-focused prototype optimized for bookings and mobile experience."
+                data-pt="Landing page de demonstração para pousada, criada como protótipo focado em conversão, otimizado para reservas e experiência mobile.">
+                Demo landing page for a guesthouse, designed as a conversion-focused prototype optimized for bookings and mobile experience.
               </p>
 
             </div>
 
             <a href="./projects/pousada-landing-page/index.html" class="project-link" data-en="View Project →"
               data-pt="Ver Projeto →">
+              View Project →
+            </a>
+          </div>
+
+          <div class="project-card fade-in" data-tags="playwright k6">
+            <div class="project-content">
+              <h3 data-en="Playwright E-commerce API Performance" data-pt="Playwright E-commerce API Performance">
+                playwright-ecommerce-api-performance
+              </h3>
+              <p data-en="Public repository for comprehensive testing of an e-commerce API using Playwright, focusing on both functional API validation and performance evaluation with k6."
+                data-pt="Repositório público para testes abrangentes de uma API de e-commerce com Playwright, focando em validação funcional de API e avaliação de desempenho com k6.">
+                Public repository for comprehensive testing of an e-commerce API using Playwright, focusing on both functional API validation and performance evaluation with k6.
+              </p>
+            </div>
+            <a href="https://github.com/JGuylherme/playwright-ecommerce-api-performance" class="project-link" data-en="View Project →"
+              data-pt="Ver Projeto →" target="_blank" rel="noopener noreferrer">
+              View Project →
+            </a>
+          </div>
+
+          <div class="project-card fade-in" data-tags="playwright">
+            <div class="project-content">
+              <h3 data-en="Playwright E-commerce End-to-End" data-pt="Playwright E-commerce End-to-End">
+                playwright-ecommerce
+              </h3>
+              <p data-en="Public repository for end-to-end test automation of the SauceDemo application using Playwright and the Page Object Model pattern."
+                data-pt="Repositório público para automação de testes ponta a ponta da aplicação SauceDemo usando Playwright e o padrão Page Object Model.">
+                Public repository for end-to-end test automation of the SauceDemo application using Playwright and the Page Object Model pattern.
+              </p>
+            </div>
+            <a href="https://github.com/JGuylherme/playwright-ecommerce" class="project-link" data-en="View Project →"
+              data-pt="Ver Projeto →" target="_blank" rel="noopener noreferrer">
               View Project →
             </a>
           </div>

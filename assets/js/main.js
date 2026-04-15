@@ -120,6 +120,24 @@ function buildDots() {
 }
 buildDots();
 
+const projectFilterButtons = document.querySelectorAll('.filter-btn');
+const projectCards = document.querySelectorAll('.project-card');
+
+function setProjectFilter(filter) {
+  projectFilterButtons.forEach(btn => btn.classList.toggle('active', btn.dataset.filter === filter));
+  projectCards.forEach(card => {
+    const tags = card.dataset.tags ? card.dataset.tags.split(' ') : [];
+    const visible = filter === 'all' || tags.includes(filter);
+    card.classList.toggle('hidden', !visible);
+  });
+}
+
+projectFilterButtons.forEach(button => {
+  button.addEventListener('click', () => setProjectFilter(button.dataset.filter));
+});
+
+setProjectFilter('all');
+
 window.addEventListener('scroll', () => {
   const scrollY = window.scrollY + window.innerHeight / 3;
   sections.forEach((id, i) => {
