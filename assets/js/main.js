@@ -11,6 +11,8 @@ function setTheme(t) {
   redrawCanvas();
 }
 
+let ni = 0, ci = 0, deleting = false;
+
 function setLang(l) {
   document.getElementById('enBtn').classList.toggle('active', l === 'en');
   document.getElementById('ptBtn').classList.toggle('active', l === 'pt');
@@ -20,6 +22,10 @@ function setLang(l) {
     const val = el.getAttribute('data-' + l);
     if (val !== null) el.innerHTML = val;
   });
+
+  ni = 0;
+  ci = 0;
+  deleting = false;
 }
 
 const savedTheme = localStorage.getItem('theme') || getTimeTheme();
@@ -28,20 +34,43 @@ setTheme(savedTheme);
 const savedLang = localStorage.getItem('lang') || 'en';
 setLang(savedLang);
 
-const names = ['Guylherme', 'a dev', 'a QA', 'Guylherme'];
-let ni = 0, ci = 0, deleting = false;
+const names = {
+  en: [
+    'Guylherme',
+    'a Software Engineer'
+  ],
+  pt: [
+    'Guylherme',
+    'um Engenheiro de Software'
+  ]
+};
 
 function typeLoop() {
   const el = document.getElementById('typedName');
   if (!el) return;
-  const word = names[ni];
+
+  const lang = localStorage.getItem('lang') || 'en';
+  const currentNames = names[lang];
+
+  const word = currentNames[ni];
+
   if (!deleting) {
     el.textContent = word.slice(0, ++ci);
-    if (ci === word.length) { deleting = true; return setTimeout(typeLoop, 1600); }
+
+    if (ci === word.length) {
+      deleting = true;
+      return setTimeout(typeLoop, 1600);
+    }
   } else {
     el.textContent = word.slice(0, --ci);
-    if (ci === 0) { deleting = false; ni = (ni + 1) % names.length; return setTimeout(typeLoop, 300); }
+
+    if (ci === 0) {
+      deleting = false;
+      ni = (ni + 1) % currentNames.length;
+      return setTimeout(typeLoop, 300);
+    }
   }
+
   setTimeout(typeLoop, deleting ? 55 : 90);
 }
 typeLoop();
